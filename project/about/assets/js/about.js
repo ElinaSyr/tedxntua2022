@@ -120,9 +120,7 @@ function updateBlackBoxes () {
     teamItem.style.transform = `translate3d(-1em, ${height}px, 0px)`;
     // rotate image
     teamItem.style.transform += `rotate(-${angle}deg)`;
-
     // if you have a question about the math feel free to ask me
-
   }
 }
 
@@ -132,7 +130,7 @@ resizePictures();
 // --- Change Team Names ---
 if (!isMobile) {
   const teamName = document.getElementById("teamName");
-  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION", "THE TEDxNTUA"];
+  var teamNames = ["GRAPHICS", "EXPERIENCE", "IT", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION"];
 
   // map each word to Y coordinates
   // each word is mapped to range equal to the team container's height
@@ -140,7 +138,14 @@ if (!isMobile) {
   let range = containerHeight;
   let offset = -0.33 * containerHeight;
   var teamName_map = mapTeamNames(range, offset);
+  var window_offset = window.pageYOffset; 
+  var height11 = document.getElementById('secondaryPage'). offsetHeight;
+  console.log(window_offset);
+  console.log(height11);
+
 }
+
+
 /**
  *
  * Returns an array of numbers representing the limits for
